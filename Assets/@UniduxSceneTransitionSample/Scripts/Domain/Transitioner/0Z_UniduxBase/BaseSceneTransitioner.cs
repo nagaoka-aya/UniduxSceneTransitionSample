@@ -7,13 +7,16 @@ namespace Denity.UniduxSceneTransitionSample.Transitioner
     {
         /// <summary>
         /// タイトル画面に遷移する
+        /// 次の画面に遷移する時はEnterXXXXPageと書く
         /// </summary>
         public void EnterTitlePage()
         {
-            // 一旦ステートのクリーンのためにResetでディスパッチ
-            UniduxCore.Dispatch(PageDuck<PageName, SceneName>.ActionCreator.Reset());
-            // 最初のタイトル画面を起動 → Pushでディスパッチ
-            UniduxCore.Dispatch(PageDuck<PageName, SceneName>.ActionCreator.Push(PageName.Title));
+            // TODO: 一旦ステートのクリーン → どのアクションでディスパッチする？
+            // var action1 = PageDuck<PageName, SceneName>.ActionCreator.;
+            // UniduxCore.Dispatch(action1);
+            // TODO: 最初のタイトル画面を起動 → どのアクションでディスパッチする？
+            // var action2 = PageDuck<PageName, SceneName>.ActionCreator.;
+            // UniduxCore.Dispatch(action2);
         }
     }
 }

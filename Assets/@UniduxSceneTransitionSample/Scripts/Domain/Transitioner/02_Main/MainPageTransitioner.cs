@@ -8,23 +8,27 @@ namespace Denity.UniduxSceneTransitionSample.Transitioner
     {
         /// <summary>
         /// リザルト画面に遷移する処理
+        /// 次に遷移する場合はEnterXXXXPageと書く
         /// </summary>
         public void EnterResultPage()
         {
-            // MainGameDataにある神のHPとDDをResultPageDataに渡しながら画面遷移を実行
-            var damageDone = UniduxCore.State.Page.GetData<MainPageData>().DamageDone;
-            // 情報をリザルト画面に引継ぎつつ画面遷移 → Pushでディスパッチ
-            UniduxCore.Dispatch(PageDuck<PageName, SceneName>.ActionCreator.Push(PageName.Result, new ResultPageData(damageDone)));
+            // MainGameDataにある神のHPとDDをResultPageDataに渡しながら画面遷移を実行する
+            // TODO: 今のMainPageDataをどのように取得するか？
+            // var damageDone = ...;
+            // TODO: 情報をリザルト画面に引継ぎつつ画面遷移 → どうディスパッチする？
+            // var action = PageDuck<PageName, SceneName>.ActionCreator.;
+            // UniduxCore.Dispatch(action);
         }
 
         /// <summary>
         /// タイトル画面に遷移する処理
+        /// 前に遷移する場合はReturnXXXXPageと書く
         /// </summary>
         public void ReturnTitlePage()
         {
-            // タイトル画面に戻る → 前のページに戻る Pop
-            var action = PageDuck<PageName, SceneName>.ActionCreator.Pop();
-            UniduxCore.Dispatch(action);
+            // TODO: タイトル画面に戻る → 前のページに戻る → どうディスパッチする？
+            // var action = PageDuck<PageName, SceneName>.ActionCreator.;
+            // UniduxCore.Dispatch(action);
         }
     }
 }

@@ -17,9 +17,9 @@ namespace Denity.UniduxSceneTransitionSample.Service
 
         public void Originate()
         {
-            // Uniduxから現状のページデータであるMainGameDataを取得する
-            _godHp = UniduxCore.State.Page.GetData<MainPageData>().GodHp;
-            _damageDone = UniduxCore.State.Page.GetData<MainPageData>().DamageDone;
+            // TODO: UniduxからページデータであるMainPageDataをどのように取得する？
+            // _godHp = ...;
+            // _damageDone = ...;
             _mainPageData = new MainPageData(_godHp, _damageDone);
             _godHpRp = new DoubleReactiveProperty(_godHp);
         }
@@ -45,8 +45,9 @@ namespace Denity.UniduxSceneTransitionSample.Service
             _mainPageData.GodHp = _godHp;
             _mainPageData.DamageDone = _damageDone;
 
-            // データの更新 → SetData でディスパッチ
-            UniduxCore.Dispatch(PageDuck<PageName, SceneName>.ActionCreator.SetData(_mainPageData));
+            // TODO : データの更新 → どうディスパッチする？
+            // var action = PageDuck<PageName, SceneName>.ActionCreator.;
+            // UniduxCore.Dispatch(action);
         }
     }
 }

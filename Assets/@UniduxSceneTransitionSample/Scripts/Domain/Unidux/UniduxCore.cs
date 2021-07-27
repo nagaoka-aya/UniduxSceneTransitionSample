@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Denity.UniduxSceneTransitionSample.Unidux
 {
     /// <summary>
-    /// StoreAccessor実装クラスであるUnidux
+    /// Uniduxのコアサービスクラス
     /// </summary>
     public sealed class UniduxCore : SingletonMonoBehaviour<UniduxCore>, IStoreAccessor
     {
@@ -27,11 +27,10 @@ namespace Denity.UniduxSceneTransitionSample.Unidux
         private static IReducer[] Reducers
         {
             get {
-                // Assign your reducers
+                // TODO: Reducer を設定する
                 return new IReducer[]
                 {
-                    new SceneReducer(),
-                    new PageReducer(),
+
                 };
             }
         }

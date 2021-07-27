@@ -23,11 +23,13 @@ namespace Denity.UniduxSceneTransitionSample.Navigator
             _licenceView.Hide();
 
             _titleView.OnShowLicenceAsObservable()
-                .Subscribe(_ => _licenceView.Show())
+                // TODO: ライセンス表記を表示する
+                .Subscribe()
                 .AddTo(_disposable);
 
             _licenceView.OnHideLicenceAsObservable()
-                .Subscribe(_ => _licenceView.Hide())
+                // TODO: ライセンス表記を隠す
+                .Subscribe()
                 .AddTo(_disposable);
         }
 

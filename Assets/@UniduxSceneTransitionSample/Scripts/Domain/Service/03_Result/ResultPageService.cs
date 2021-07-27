@@ -13,7 +13,8 @@ namespace Denity.UniduxSceneTransitionSample.Service
 
         public void Originate()
         {
-            _pageData = UniduxCore.State.Page.GetData<ResultPageData>();
+            // TODO: UniduxからページデータであるResultPageDataをどのように取得する？
+            // _pageData = ...;
             _damageDoneRp = new DoubleReactiveProperty(_pageData.DamageDone);
         }
 
