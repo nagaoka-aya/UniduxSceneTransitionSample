@@ -13,7 +13,8 @@ namespace Denity.UniduxSceneTransitionSample.Transitioner
         public void EnterMainPage()
         {
             // 次画面に移行．
-            // ここではMainPageDataの初期化も行いたいので，新たにMainPageDataのインスタンスを作成 → どのようにディスパッチするか？
+            // TODO : ここではMainPageDataの初期化も行いたいので，
+            // 新たにMainPageDataのインスタンスを作成 → どのようにディスパッチするか？
             // var action = PageDuck<PageName, SceneName>.ActionCreator.;
             // UniduxCore.Dispatch(action);
         }
