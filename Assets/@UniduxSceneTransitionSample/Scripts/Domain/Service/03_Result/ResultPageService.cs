@@ -1,10 +1,10 @@
 ﻿using Denity.UniduxSceneTransitionSample.PageData;
-using Denity.UniduxSceneTransitionSample.Unidux;
+using Denity.UniduxSceneTransitionSample.Progression;
 using UniRx;
 
 namespace Denity.UniduxSceneTransitionSample.Service
 {
-    public class ResultPageService : IService
+    public class ResultPageService : IPeriod
     {
         ResultPageData _pageData;
 
